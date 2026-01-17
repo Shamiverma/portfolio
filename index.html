@@ -4,213 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shami Verma | Portfolio</title>
-
-    <style>
-        :root {
-            --pink-dark: #c2185b;
-            --pink-main: #f48fb1;
-            --pink-light: #fde4ec;
-            --pink-soft: #fff0f5;
-        }
-
-        body {
-            font-family: "Poppins", Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            background-color: var(--pink-soft);
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--pink-dark), var(--pink-main));
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 15px;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ffe6f0;
-        }
-
-        main {
-            padding: 30px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        section {
-            background: white;
-            margin-bottom: 25px;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        section img {
-            max-width: 160px;
-            border-radius: 12px; /* NOT oval */
-            border: 4px solid var(--pink-light);
-            display: block;
-            margin-bottom: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        section img:hover {
-            transform: scale(1.05);
-        }
-
-        h2 {
-            color: var(--pink-dark);
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 8px;
-        }
-
-        form label {
-            display: block;
-            margin-top: 12px;
-            font-weight: 500;
-        }
-
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            border-radius: 8px;
-            border: 1px solid #f3b6cc;
-            outline: none;
-            transition: border 0.3s, box-shadow 0.3s;
-        }
-
-        form input:focus,
-        form textarea:focus {
-            border-color: var(--pink-dark);
-            box-shadow: 0 0 8px rgba(194, 24, 91, 0.3);
-        }
-
-        form button {
-            margin-top: 18px;
-            padding: 12px;
-            background: var(--pink-dark);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s, transform 0.2s;
-        }
-
-        form button:hover {
-            background: #ad1457;
-            transform: scale(1.05);
-        }
-
-        footer {
-            text-align: center;
-            background: var(--pink-dark);
-            color: white;
-            padding: 12px;
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
 
-    <!-- Header Section -->
-    <header>
+    <header class="animate__animated animate__fadeInDown">
         <h1>Shami Verma</h1>
         <p>B.Tech CSE Student | Aspiring Developer</p>
-
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
+        <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <div class="profile-container">
+        <img src="images/photo.jpeg" alt="Shami Verma" class="profile-img">
+    </div>
+    <p>Hello! I am Shami Verma, a Computer Science student specializing in the MERN Stack.</p>
+</section>
 
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="images/photo.jpeg" alt="Profile picture of Shami Verma">
-            <p>
-                Hello! I am Shami Verma, a Computer Science Engineering student with
-                a strong interest in programming, web development, and problem solving.
-                I enjoy learning new technologies and building practical projects.
-            </p>
+        <section id="experience" class="reveal">
+            <h2>Experience</h2>
+            <div class="exp-container">
+                <div class="exp-item">
+                    <div class="exp-text">
+                        <h3>Volunteering at WikiTech Club UU</h3>
+                        <p>Involved in organizing technical events and the Wikipedia 25th-anniversary celebration.</p>
+                    </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Wikipedia_svg_logo.svg" alt="WikiTech Club" class="exp-image">
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-text">
+                        <h3>Volunteering at FOSS Prayagraj</h3>
+                        <p>Contributing to the Free and Open Source Software community and local meetups.</p>
+                    </div>
+                    <img src="images/Screenshot 2026-01-17 at 4.08.08 PM.png" alt="FOSS Prayagraj" class="exp-image">
+                </div>
+            </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML5 & CSS3</li>
-                <li>Basic JavaScript</li>
-                <li>Python Programming</li>
-                <li>C Programming</li>
-                <li>DBMS Fundamentals</li>
-            </ul>
+        <section id="skills" class="reveal">
+            <h2>Technical Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <img src="images/Screenshot 2026-01-17 at 4.37.18 PM.png" class="skill-logo" alt="MERN">
+                    <span>MERN Stack</span>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" class="skill-logo" alt="HTML">
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" class="skill-logo" alt="CSS">
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/Screenshot 2026-01-17 at 4.33.07 PM.png" class="skill-logo" alt="JS">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" class="skill-logo" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/c-1.svg" class="skill-logo" alt="C">
+                    <span>C Programming</span>
+                    </div>
+            </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="reveal">
             <h2>Contact Me</h2>
-
             <form>
                 <label for="name">Name</label>
                 <input type="text" id="name" required>
-
                 <label for="email">Email</label>
                 <input type="email" id="email" required>
-
                 <label for="message">Message</label>
                 <textarea id="message" rows="5" required></textarea>
-
-                <button type="submit">Send Message 💌</button>
+                <button type="submit" class="btn-animate">Send Message 💌</button>
             </form>
         </section>
-
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Shami Verma. All rights reserved.</p>
     </footer>
 
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>

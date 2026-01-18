@@ -231,3 +231,114 @@ footer {
     border: 5px solid white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+/* Dark Mode Colors */
+body.dark-mode {
+    --pink-soft: #1a1a1a;
+    background-color: #121212;
+    color: #ffffff;
+}
+body.dark-mode section {
+    background: #252525;
+    color: white;
+}
+
+/* To-Do List Styling */
+.todo-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+#todo-list li {
+    background: var(--pink-light);
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+.remove-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    font-weight: bold;
+}
+/* --- Dark Mode Text Overrides --- */
+
+/* Targets the headings and paragraphs in Experience and Skills */
+body.dark-mode #experience h2, 
+body.dark-mode #experience h3, 
+body.dark-mode #experience p,
+body.dark-mode #skills h2,
+body.dark-mode #skills span {
+    color: #1a1a1a !important; /* Forces the text to stay dark/black */
+}
+
+/* Optional: If your Skill Cards turn dark, make sure the card background 
+   stays light enough for black text to be visible */
+body.dark-mode .skill-card {
+    background-color: #fce4ec; /* A very light pink so black text pops */
+    color: #1a1a1a;
+}
+
+body.dark-mode .exp-item {
+    background-color: #ffffff; /* Keep experience items white for contrast */
+    color: #1a1a1a;
+}
+/* --- Glassmorphism Sections --- */
+section {
+    /* 70% opacity white background */
+    background: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* For Safari support */
+    
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px 0 rgba(194, 24, 91, 0.1);
+}
+
+/* --- Dark Mode Refinement --- */
+body.dark-mode section {
+    /* Darker glass for sections in Dark Mode */
+    background: rgba(255, 255, 255, 0.85); 
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Specific text color safety for Experience and Skills */
+body.dark-mode #experience, 
+body.dark-mode #skills,
+body.dark-mode #experience h2,
+body.dark-mode #experience h3,
+body.dark-mode #experience p,
+body.dark-mode .skill-card span {
+    color: #000000 !important;
+}
+
+/* Ensure the cards inside the glass sections stand out */
+.skill-card, .exp-item {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
